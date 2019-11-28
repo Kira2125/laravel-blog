@@ -101,7 +101,7 @@
                     <label for="content">Content</label>
 
                     <textarea name="content" id="content" cols="5"
-                              rows="5" class="form-control"></textarea>
+                              rows="5" class="form-control">{{ $post->content }}</textarea>
 
                 </div>
 
@@ -122,4 +122,24 @@
         </div>
 
     </div>
+@stop
+
+@section('styles')
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+
+@stop
+
+@section('scripts')
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            $('#content').summernote();
+        });
+
+    </script>
+
 @stop

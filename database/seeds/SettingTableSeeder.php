@@ -12,7 +12,7 @@ class SettingTableSeeder extends Seeder
     public function run()
     {
         App\Setting::create([
-            'site_name' => "Laravel's blog",
+            'site_name' => "Laravel blog",
             'address' => 'Russia, Sevastopol',
             'contact_number' => '8 978 540 43 54',
             'contact_email' => 'some@gmail.com'
