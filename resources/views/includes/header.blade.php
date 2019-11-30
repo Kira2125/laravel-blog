@@ -40,11 +40,7 @@
                         Create
                     </a>
                 </li>
-                <li class="search search_main" style="color: black; padding-left: 25px;">
-                    <a href="/login">
-                        Sign In
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>

@@ -25,18 +25,13 @@ Route::get('/', [
 ]);
 
 
-Route::get('/results', function (){
+Route::get('/results', [
 
-    $posts= \App\Post::where('title','like', '%' . request('query') . '%')->get();
+    'uses' => 'FrontEndController@search',
 
-    return view('results')->with('posts', $posts)
-                                ->with('title', 'Search results : ' . request('query'))
-                                ->with('settings', \App\Setting::first())
-                                ->with('categories', \App\Category::take(5)->get())
-                                ->with('query', request('query'))
-                                ->with('tags', Tag::all());
+    'as' => 'search'
 
-});
+]);
 
 
 Route::get('/post/{slug}', [
